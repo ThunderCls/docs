@@ -1,6 +1,6 @@
 # DbgArgumentOverlaps
 
-This function is going to check if a certain argument range already exist.
+This function checks whether a certain argument range already exist.
 
 ```c++
 bool DbgArgumentOverlaps(duint start, duint end);
