@@ -1,25 +1,32 @@
 # DbgArgumentOverlaps
 
-Function description.
+This function is going to check if a certain argument range already exist.
 
 ```c++
-Function definition.
+bool DbgArgumentOverlaps(duint start, duint end);
 ```
 
 ## Parameters
 
-`param1` Parameter description.
+`start` first address of the argument range.
+
+`end` last address of the argument range.
 
 ## Return Value
 
-Return value description.
+Returns TRUE if the given range overlaps an existing argument range or FALSE otherwise
 
 ## Example
 
 ```c++
-Example code.
+if(DbgArgumentOverlaps(0x00401000, 0x00401013))
+  GuiAddLogMessage("Argument range overlaps an existing one\r\n");
+else
+  GuiAddLogMessage("Argument range is not overlaping\r\n");
 ```
 
 ## Related functions
 
-- List of related functions
+- DbgArgumentAdd
+- DbgArgumentDel
+- DbgArgumentGet
